@@ -1,0 +1,59 @@
+<rdf:RDF xmlns="http://purl.org/rss/1.0/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:hatena="http://www.hatena.ne.jp/info/xmlns#" xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/" xmlns:openSearch="http://a9.com/-/spec/opensearchrss/1.0/" xml:lang="ja">
+<channel rdf:about="https://f.hatena.ne.jp/ytyaru/Hatena%20Blog/rss?sort=new">
+<title>ytyaru's fotolife - Hatena Blog</title>
+<link>https://f.hatena.ne.jp/ytyaru/Hatena%20Blog/?sort=new</link>
+<description>ytyaru's fotolife - Hatena Blog</description>
+<openSearch:totalResults>3341</openSearch:totalResults>
+<openSearch:startIndex>1</openSearch:startIndex>
+<openSearch:itemsPerPage>50</openSearch:itemsPerPage>
+<items>
+<rdf:Seq>
+<rdf:li rdf:resource="http://f.hatena.ne.jp/ytyaru/20211006125843"/>
+<rdf:li rdf:resource="http://f.hatena.ne.jp/ytyaru/20211006125842"/>
+</rdf:Seq>
+</items>
+</channel>
+<item rdf:about="http://f.hatena.ne.jp/ytyaru/20211006125843">
+<title>20211006125843</title>
+<link>http://f.hatena.ne.jp/ytyaru/20211006125843</link>
+<description>
+<![CDATA[ <a href="http://f.hatena.ne.jp/ytyaru/20211006125843"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/y/ytyaru/20211006/20211006125843_m.jpg" alt="20211006125843"></a> ]]>
+</description>
+<content:encoded>
+<![CDATA[ <a href="http://f.hatena.ne.jp/ytyaru/20211006125843"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/y/ytyaru/20211006/20211006125843.png" alt="20211006125843"></a> ]]>
+</content:encoded>
+<dc:date>2021-10-06T12:58:43+09:00</dc:date>
+<hatena:imageurl>https://cdn-ak.f.st-hatena.com/images/fotolife/y/ytyaru/20211006/20211006125843.png</hatena:imageurl>
+<hatena:imageurlsmall>https://cdn-ak.f.st-hatena.com/images/fotolife/y/ytyaru/20211006/20211006125843_m.jpg</hatena:imageurlsmall>
+<hatena:imageurlmedium>https://cdn-ak.f.st-hatena.com/images/fotolife/y/ytyaru/20211006/20211006125843_120.jpg</hatena:imageurlmedium>
+<hatena:imagewidth>1200</hatena:imagewidth>
+<hatena:imageheight>610</hatena:imageheight>
+<hatena:syntax>f:id:ytyaru:20211006125843p:image</hatena:syntax>
+<hatena:colors>
+<hatena:color>white</hatena:color>
+<hatena:color>blue</hatena:color>
+</hatena:colors>
+</item>
+<item rdf:about="http://f.hatena.ne.jp/ytyaru/20211006125842">
+<title>20211006125842</title>
+<link>http://f.hatena.ne.jp/ytyaru/20211006125842</link>
+<description>
+<![CDATA[ <a href="http://f.hatena.ne.jp/ytyaru/20211006125842"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/y/ytyaru/20211006/20211006125842_m.jpg" alt="20211006125842"></a> ]]>
+</description>
+<content:encoded>
+<![CDATA[ <a href="http://f.hatena.ne.jp/ytyaru/20211006125842"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/y/ytyaru/20211006/20211006125842.png" alt="20211006125842"></a> ]]>
+</content:encoded>
+<dc:date>2021-10-06T12:58:42+09:00</dc:date>
+<hatena:imageurl>https://cdn-ak.f.st-hatena.com/images/fotolife/y/ytyaru/20211006/20211006125842.png</hatena:imageurl>
+<hatena:imageurlsmall>https://cdn-ak.f.st-hatena.com/images/fotolife/y/ytyaru/20211006/20211006125842_m.jpg</hatena:imageurlsmall>
+<hatena:imageurlmedium>https://cdn-ak.f.st-hatena.com/images/fotolife/y/ytyaru/20211006/20211006125842_120.jpg</hatena:imageurlmedium>
+<hatena:imagewidth>1200</hatena:imagewidth>
+<hatena:imageheight>610</hatena:imageheight>
+<hatena:syntax>f:id:ytyaru:20211006125842p:image</hatena:syntax>
+<hatena:colors>
+<hatena:color>white</hatena:color>
+<hatena:color>blue</hatena:color>
+</hatena:colors>
+</item>
+</rdf:RDF>
+

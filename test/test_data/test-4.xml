@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://purl.org/atom/ns#" xmlns:hatena="http://www.hatena.ne.jp/info/xmlns#">
+  <title>ytyaru.png</title>
+  <link rel="alternate" type="text/html" href="http://f.hatena.ne.jp/ytyaru/20211008165941"/>
+  <link rel="service.edit" type="application/x.atom+xml" href="http://f.hatena.ne.jp/atom/edit/20211008165941" title="ytyaru.png"/>
+  <issued>2021-10-08T16:59:41+09:00</issued>
+  <author>
+    <name>ytyaru</name>
+  </author>
+  <generator url="http://f.hatena.ne.jp/" version="1.0">Hatena::Fotolife</generator>
+  <id>tag:hatena.ne.jp,2005:fotolife-ytyaru-20211008165941</id>
+  <hatena:imageurl>https://cdn-ak.f.st-hatena.com/images/fotolife/y/ytyaru/20211008/20211008165941.png</hatena:imageurl>
+  <hatena:imageurlmedium>https://cdn-ak.f.st-hatena.com/images/fotolife/y/ytyaru/20211008/20211008165941_120.jpg</hatena:imageurlmedium>
+  <hatena:imageurlsmall>https://cdn-ak.f.st-hatena.com/images/fotolife/y/ytyaru/20211008/20211008165941_m.jpg</hatena:imageurlsmall>
+  <hatena:syntax>f:id:ytyaru:20211008165941p:image</hatena:syntax>
+</entry>
+

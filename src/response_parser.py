@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # coding: utf8
 import requests
+import sys
 class ResponseParser:
     def parse(self, res:requests.Response):
         if res.ok: self.parse_success(res)

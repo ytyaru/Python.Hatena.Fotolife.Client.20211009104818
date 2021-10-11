@@ -47,6 +47,10 @@
     * `persistent`: 次回から自動的にログインするか否か
     * `recaptcha_token`: 「私はボットではありません」チェックの進化版。ユーザが操作せずとも自動的にBOTチェックする。そのためにJavaScriptで実行することが必要である。
 
+　2020-01-11頃まではログインできていた模様。
+
+* https://koukaforest.hatenablog.com/entry/2020/01/11/010000
+
 ## reCAPTUCHA v3
 
 * [recaptcha](https://hatoblog.net/recaptcha/)

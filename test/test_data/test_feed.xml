@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF
+	xmlns="http://purl.org/rss/1.0/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:hatena="http://www.hatena.ne.jp/info/xmlns#"
+	xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
+	xmlns:openSearch="http://a9.com/-/spec/opensearchrss/1.0/"
+	xml:lang="ja">
+<channel rdf:about="https://f.hatena.ne.jp/ytyaru/cli/rss?sort=new">
+	<title>ytyaru's fotolife - cli</title>
+	<link>https://f.hatena.ne.jp/ytyaru/cli/?sort=new</link>
+	<description>ytyaru's fotolife - cli</description>
+	<openSearch:totalResults>1</openSearch:totalResults>
+	<openSearch:startIndex>1</openSearch:startIndex>
+	<openSearch:itemsPerPage>50</openSearch:itemsPerPage>
+	<items>
+	<rdf:Seq>
+		<rdf:li rdf:resource="http://f.hatena.ne.jp/ytyaru/20211008165941" />
+	</rdf:Seq>
+	</items>
+</channel>
+<item rdf:about="http://f.hatena.ne.jp/ytyaru/20211008165941">
+	<title>ytyaru.png</title>
+	<link>http://f.hatena.ne.jp/ytyaru/20211008165941</link>
+	<description><![CDATA[<a href="http://f.hatena.ne.jp/ytyaru/20211008165941"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/y/ytyaru/20211008/20211008165941_m.jpg" alt="ytyaru.png"></a>]]></description>
+	<content:encoded><![CDATA[<a href="http://f.hatena.ne.jp/ytyaru/20211008165941"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/y/ytyaru/20211008/20211008165941.png" alt="ytyaru.png"></a>]]></content:encoded>
+	<dc:date>2021-10-08T16:59:41+09:00</dc:date>
+	<hatena:imageurl>https://cdn-ak.f.st-hatena.com/images/fotolife/y/ytyaru/20211008/20211008165941.png</hatena:imageurl>
+	<hatena:imageurlsmall>https://cdn-ak.f.st-hatena.com/images/fotolife/y/ytyaru/20211008/20211008165941_m.jpg</hatena:imageurlsmall>
+	<hatena:imageurlmedium>https://cdn-ak.f.st-hatena.com/images/fotolife/y/ytyaru/20211008/20211008165941_120.jpg</hatena:imageurlmedium>
+	
+		<hatena:imagewidth>256</hatena:imagewidth>
+	
+	
+		<hatena:imageheight>256</hatena:imageheight>
+	
+	<hatena:syntax>f:id:ytyaru:20211008165941p:image</hatena:syntax>
+	<hatena:colors>
+		<hatena:color>white</hatena:color>
+		<hatena:color>black</hatena:color>
+	</hatena:colors>
+</item>
+</rdf:RDF>
+
