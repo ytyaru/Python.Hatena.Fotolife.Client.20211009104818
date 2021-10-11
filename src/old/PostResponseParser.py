@@ -7,11 +7,12 @@ import os, sys
 class PostResponseParser:
     def parse(self, xml_text):
         xml = xmltodict.parse(xml_text)
+
         print(xml['entry']['title'])
         print(xml['entry']['issued'])
         print(xml['entry']['author']['name'])
-#        print(xml['entry']['dc:subject']['#text'])
-#        print(xml['entry']['generator']['#text'])
+#       print(xml['entry']['dc:subject']['#text'])
+#       print(xml['entry']['generator']['#text'])
         print(xml['entry']['hatena:imageurl'])
         print(xml['entry']['hatena:imageurlmedium'])
         print(xml['entry']['hatena:imageurlsmall'])

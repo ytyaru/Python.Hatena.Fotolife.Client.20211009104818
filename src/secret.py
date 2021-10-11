@@ -15,3 +15,11 @@ class Secret:
                 raise e
         return secret
 
+if __name__ == '__main__':
+    from path import Path
+    secret = Secret.from_json(
+        Path.here('secret.json'),
+        Path.here('secret-schema.json')
+    )
+    print(secret['username'])
+

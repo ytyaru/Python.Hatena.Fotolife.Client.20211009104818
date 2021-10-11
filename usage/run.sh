@@ -18,6 +18,8 @@ Run() {
 		cat '../test/test_data/test-4.xml' | '../src/PostResponseParser.py' | sed -n 7P 
 		cat '../test/test_data/test-4.xml' | '../src/PostResponseParser.py' | sed -n 8P 
 		cat '../test/test_data/test-4.xml' | '../src/PostResponseParser.py' | sed -n 9P 
+		cat '../test/test_data/test-4.xml' | '../src/PostResponseParser.py' | sed -n 10P 
+		cat '../test/test_data/test-4.xml' | '../src/PostResponseParser.py' | sed -n 11P 
 	}
 	feed() {
 		# Feed したときに image_id 一覧を取得する
@@ -39,8 +41,8 @@ Run() {
 		local DT=${ID/%?/}
 		'../src/run.py' get $DT
 	}
-#	post
-	feed
+	post
+#	feed
 #	get
 }
 Run "$@"

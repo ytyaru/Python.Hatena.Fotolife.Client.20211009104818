@@ -20,50 +20,32 @@ Run() {
 		shift $((OPTIND - 1))
 	}
 	ParseCommand "$@"
+	USERNAME="$('../src/secret.py')"
+	FILENAME=${ARG_FOLDER:-top_folder}
 	ALL_ID=;
 	CMD_PRM=;
 	[ -n "$ARG_FOLDER" ] && CMD_PRM+=" -f '$ARG_FOLDER' " || :;
-	XML=`eval "'$PARENT/src/run.sh' feed $CMD_PRM"`
+	XML=`eval "'$PARENT/src/run.py' feed $CMD_PRM"`
+	echo -e "$XML"
 	LIST=`echo -e "$XML" | "$PARENT/src/FeedResponseParser.py" -H`
 	PAGE_NUM=`echo -e "$LIST" | head -n +1 | cut -f4`
 	ALL_ID+=`echo -e "$LIST" | tail -n +2 | cut -f1`
+	ALL_ID+="\n"
+	echo -e "$LIST"
+#	echo -e "$LIST" | head -n +1 >> "$USERNAME/${FILENAME}__.txt"
+#	echo -e "$LIST" | tail -n +2 | cut -f1 | sort -r | uniq >> "$USERNAME/${FILENAME}__.txt"
+#	echo '' >> "$USERNAME/${FILENAME}__.txt"
 	for page in `seq 2 $PAGE_NUM`; do
-		XML=`eval "'$PARENT/src/run.sh' feed $CMD_PRM -p $page"`
+		XML=`eval "'$PARENT/src/run.py' feed $CMD_PRM -p $page"`
 		LIST=`echo -e "$XML" | "$PARENT/src/FeedResponseParser.py" -H`
 		ALL_ID+=`echo -e "$LIST" | tail -n +2 | cut -f1`
+		ALL_ID+="\n"
+		echo -e "$LIST" | tail -n +2 | cut -f1
+#		echo -e "$LIST" | tail -n +2 | cut -f1 | sort -r | uniq >> "$USERNAME/${FILENAME}__.txt"
+#		echo '' >> "$USERNAME/${FILENAME}__.txt"
 		sleep 1
 	done
-	echo -e "$ALL_ID" | sort -r | uniq > all_id.txt
-	# NEWER_IDより新しいものがない
-	# NEWER_IDより新しいものがある
-	# OLDER_IDより古いものがない
-	# OLDER_IDより古いものがある
-	# リスト中にある最新はNEWER_IDより新しい
-	# リスト中にある最古はNEWER_IDより新しい
-	# リスト中にある最新はOLDER_IDより新しい
-	# リスト中にある最古はOLDER_IDより新しい
-	feed() {
-		# Feed したときに image_id 一覧を取得する
-		local PAGE1=`cat '../test/test_data/test_feed_50.xml' | '../src/FeedResponseParser.py' | cut -f1`
-		local PAGE2=`cat '../test/test_data/test_feed_50_next_dup.xml' | '../src/FeedResponseParser.py' | cut -f1`
-		# 重複「20211006125842p」は1件のみ
-		# 非重複「20211006125843p」等は結合される
-		local ALL=`cat <(echo -e "$PAGE1") <(echo -e "$PAGE2") | sort -r | uniq`
-		echo -e "$ALL"
-		# ページ数を取得する
-		local PAGE_NUM=`cat '../test/test_data/test_feed_50.xml' | '../src/FeedResponseParser.py' -H | head -n +1 | cut -f4`
-		echo "$PAGE_NUM"
-		# ページ数を指定する
-#		'../src/run.sh' feed -p $PAGE_NUM
-	}
-	get() {
-		# IMAGE_IDからIMAGE_DATETIMEを取得してgetする
-		local ID=20211008165941p
-		local DT=${ID/%?/}
-		'../src/run.py' get $DT
-	}
-#	post
-	feed
-#	get
+	mkdir -p "$USERNAME"
+	echo -e "$ALL_ID" | head -c -1 | sort -r | uniq > "$USERNAME/$FILENAME.txt"
 }
 Run "$@"

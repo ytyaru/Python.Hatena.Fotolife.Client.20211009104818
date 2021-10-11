@@ -35,17 +35,9 @@ class FeedResponseParser:
     def _blank_to_zero(self, v):
         return int(v) if v else 0
     def _get_image_id(self, hatena_syntax):
-        res = re.search(r'([0-9]{14,}[pjg]):image$', hatena_syntax)
-        if res: return res.group(1)
-        #f:id:ytyaru:20161108160742f:movie
-        res = re.search(r'([0-9]{14,}[f]):movie$', hatena_syntax)
-        if res: return res.group(1)
-        print(f'[WARN] 画像IDを取得できませんでした。代わりにシンタックスを返します。{hatena_syntax}', file=sys.stderr)
-        return hatena_syntax
+        return re.search(r'([0-9]{14,}[pjg]):image$', hatena_syntax).group(1)
     def _get_image_datetime(self, hatena_syntax):
-        id = self._get_image_id(hatena_syntax)
-        if id == hatena_syntax: return hatena_syntax
-        else: return id[:-1]
+        return re.search(r'([0-9]{14,})[pjg]:image$', hatena_syntax).group(1)
 
 def parse_command():
     args = {}
