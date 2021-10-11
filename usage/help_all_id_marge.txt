@@ -1,0 +1,14 @@
+はてなフォトライフのフィードから全画像IDを取得する。ただし既存の最新IDより古いIDは取得しない。	${VERSION}
+${THIS_NAME} [-h] [-f FOLDER]
+Options:
+  -f FOLDER  対象フォルダ名。（未入力時はトップフォルダ）
+Settings:
+  ../src/secret.json  対象ユーザ名
+Outputs:
+  ${HERE}
+  上記にユーザ名のディレクトリができ、そこにフォルダ名.txtファイルができる。
+Notes:
+  対象フォルダの公開範囲が「トップと同じ」のみ対象。それ以外の「自分のみ」などでは取得できない。
+  「Hatena Blog」フォルダはデフォルトだと「自分のみ」なので「トップと同じ」に変更してから実行すること。
+Examples:
+  ${THIS_NAME} -f 'Hatena Blog'
