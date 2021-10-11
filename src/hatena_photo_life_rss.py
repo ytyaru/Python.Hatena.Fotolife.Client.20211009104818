@@ -12,6 +12,7 @@ import pathlib
 import jsonschema
 from path import Path
 from FileReader import FileReader 
+from secret import Secret
 # フォルダの公開範囲を「トップと同じ」にしないとRSSに反映されない
 # https://f.hatena.ne.jp/ytyaru/%E6%97%A5%E6%9C%AC%E8%AA%9E/rss?page=1
 # はてなフォトライフAtomAPIのFeedUriはトップフォルダのみ。RSSのURLを直接操作したほうが応用できる。
@@ -20,14 +21,7 @@ class HatenaPhotoLifeRss:
         self.__hatena_id = hatena_id
     @classmethod
     def from_json(self, path, schema_path=None):
-        secret = FileReader.json(path)
-        if schema_path:
-            schema = FileReader.json(schema_path)
-            try: jsonschema.validate(secret, schema)
-            except jsonschema.ValidationError as e:
-                print('[ERROR] secret.json 形式エラーです。secret-schema.json に従ってください。', file=sys.stderr)
-                print(e, file=sys.stderr)
-                raise e
+        secret = Secret.from_json(path, schema_path)
         return HatenaPhotoLifeRss(secret['username'])
     def get(self, folder:str=None, page:int=1, is_sort_old:bool=False, is_logging:bool=False):
         folder = f'/{urllib.parse.quote(folder)}' if folder else ''
