@@ -23,10 +23,15 @@ Run() {
 		# Feed したときに image_id 一覧を取得する
 		local PAGE1=`cat '../test/test_data/test_feed_50.xml' | '../src/FeedResponseParser.py' | cut -f1`
 		local PAGE2=`cat '../test/test_data/test_feed_50_next_dup.xml' | '../src/FeedResponseParser.py' | cut -f1`
-		local ALL=`cat <(echo -e "$PAGE1") <(echo -e "$PAGE2") | sort -r | uniq`
-		echo -e "$ALL"
 		# 重複「20211006125842p」は1件のみ
 		# 非重複「20211006125843p」等は結合される
+		local ALL=`cat <(echo -e "$PAGE1") <(echo -e "$PAGE2") | sort -r | uniq`
+		echo -e "$ALL"
+		# ページ数を取得する
+		local PAGE_NUM=`cat '../test/test_data/test_feed_50.xml' | '../src/FeedResponseParser.py' -H | head -n +1 | cut -f4`
+		echo "$PAGE_NUM"
+		# ページ数を指定する
+#		'../src/run.sh' feed -p $PAGE_NUM
 	}
 	get() {
 		# IMAGE_IDからIMAGE_DATETIMEを取得してgetする
@@ -36,6 +41,6 @@ Run() {
 	}
 #	post
 	feed
-	get
+#	get
 }
 Run "$@"
