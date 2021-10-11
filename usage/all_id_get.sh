@@ -31,7 +31,7 @@ Run() {
 	PAGE_NUM=`echo -e "$LIST" | head -n +1 | cut -f4`
 	ALL_ID+=`echo -e "$LIST" | tail -n +2 | cut -f1`
 	ALL_ID+="\n"
-	echo -e "$LIST"
+	echo -e "$LIST" | tail -n +2 | cut -f1
 #	echo -e "$LIST" | head -n +1 >> "$USERNAME/${FILENAME}__.txt"
 #	echo -e "$LIST" | tail -n +2 | cut -f1 | sort -r | uniq >> "$USERNAME/${FILENAME}__.txt"
 #	echo '' >> "$USERNAME/${FILENAME}__.txt"
