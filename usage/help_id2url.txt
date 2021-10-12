@@ -1,0 +1,12 @@
+はてなIDと画像IDからURLを生成する。	${VERSION}
+${THIS_NAME} [-h] USERNAME IMAGE_ID
+Arguments:
+  USERNAME  はてなID
+  IMAGE_ID  yyyyMMddHHmmss[pjgf]
+Outputs:
+  https://cdn-ak.f.st-hatena.com/images/fotolife/y/ytyaru/20211008/20211008165941.png
+  https://cdn-ak.f.st-hatena.com/images/fotolife/y/ytyaru/20211008/20211008165941_m.jpg
+  https://cdn-ak.f.st-hatena.com/images/fotolife/y/ytyaru/20211008/20211008165941_120.jpg
+  f:id:ytyaru:20211008165941p:image
+Examples:
+  ${THIS_NAME} ytyaru 20211008165941p

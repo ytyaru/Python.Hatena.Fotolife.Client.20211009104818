@@ -1,0 +1,14 @@
+画像ID一覧ファイルからURL一覧ファイルを生成する。	${VERSION}
+${THIS_NAME} [-h] PATH
+Arguments:
+  PATH  画像ID一覧ファイルパス
+Outputs:
+  TSV形式
+  URL\tMediumURL\tSmallUrl\tHatenaSyntax
+  ${HERE}
+  上記にユーザ名のディレクトリができ、そこにフォルダ名.url.tsvファイルができる。
+Notes:
+  事前にall_id_get.shやall_id_marge.shを使って画像ID一覧ファイルを作成しておくこと。
+  ユーザ名はディレクトリ名から取得する。変更しないこと。
+Examples:
+  ${THIS_NAME} -f 'Hatena Blog'

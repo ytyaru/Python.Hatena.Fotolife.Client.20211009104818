@@ -1,0 +1,23 @@
+画像IDからはてな記法を生成する。	${VERSION}
+* [f:id:{username}:yyyyMMddHHmmss[pjg]]
+* [f:id:{username}:yyyyMMddHHmmss[pjg]:plain]
+* [f:id:{username}:yyyyMMddHHmmss[pjg]:image]
+* [f:id:{username}:yyyyMMddHHmmss[f]:movie]
+* [(上記):w1280:h780:title=:alt=:small:medium]
+
+* すべて引数で指定する（ユーザ名、画像ID）
+* すべてall_id_get.shの成果物で指定する（ユーザ名＝json、画像ID＝IDリストファイル）
+
+${THIS_NAME} [-h] [-f FOLDER]
+Options:
+  -f FOLDER  対象フォルダ名。（未入力時はトップフォルダ）
+Settings:
+  ../src/secret.json  対象ユーザ名
+Outputs:
+  ${HERE}
+  上記にユーザ名のディレクトリができ、そこにフォルダ名.txtファイルができる。
+Notes:
+  対象フォルダの公開範囲が「トップと同じ」のみ対象。それ以外の「自分のみ」などでは取得できない。
+  「Hatena Blog」フォルダはデフォルトだと「自分のみ」なので「トップと同じ」に変更してから実行すること。
+Examples:
+  ${THIS_NAME} -f 'Hatena Blog'
