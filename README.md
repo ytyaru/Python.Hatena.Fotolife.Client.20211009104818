@@ -4,16 +4,6 @@
 
 Hatena Photo Life API client.
 
-# DEMO
-
-* [demo](https://ytyaru.github.io/Python.Hatena.Fotolife.Client.20211009104818/)
-
-![img](https://github.com/ytyaru/Python.Hatena.Fotolife.Client.20211009104818/blob/master/doc/0.png?raw=true)
-
-# Features
-
-* sales point
-
 # Requirement
 
 * <time datetime="2021-10-09T10:47:44+0900">2021-10-09</time>

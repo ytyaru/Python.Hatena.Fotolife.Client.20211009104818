@@ -4,11 +4,11 @@
 
 　はてなフォトライフのAPIクライアント。
 
-# デモ
+* [fotolife-api][]
+* [hatena-wsse][]
 
-* [demo](https://ytyaru.github.io/Python.Hatena.Fotolife.Client.20211009104818/)
-
-![img](https://github.com/ytyaru/Python.Hatena.Fotolife.Client.20211009104818/blob/master/doc/0.png?raw=true)
+[fotolife-api]:http://developer.hatena.ne.jp/ja/documents/fotolife/apis/atom
+[hatena-wsse]:http://developer.hatena.ne.jp/ja/documents/auth/apis/wsse
 
 # 特徴
 
