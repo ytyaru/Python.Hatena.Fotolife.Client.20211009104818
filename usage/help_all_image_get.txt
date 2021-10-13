@@ -1,0 +1,9 @@
+画像ID一覧ファイルから画像ファイルを全件取得する。	${VERSION}
+${THIS_NAME} [-h] PATH
+Auguments:
+  PATH  画像ID一覧ファイルパス
+Notes:
+  事前にid2urls.shを使って画像ID一覧ファイルを作成しておくこと。
+  ユーザ名はディレクトリ名から取得する。変更しないこと。
+Examples:
+  ${THIS_NAME} './ytyaru/cli.url.tsv'
